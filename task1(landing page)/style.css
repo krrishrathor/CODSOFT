@@ -1,0 +1,313 @@
+/* Base Styles */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Navigation */
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin-left: 2rem;
+  padding: 0;
+}
+
+.navbar .nav-links li {
+  margin: 0;
+}
+
+.navbar .nav-links li a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0;
+}
+
+.consult-btn {
+  background-color: #4299e1;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  text-decoration: none;
+  border-radius: 5px;
+  float: right;
+}
+
+
+/* Hero Section */
+.hero {
+  background: url('bg_landingpage.png') no-repeat center center/cover;
+  position: relative;
+  height: 80vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin: 0.5rem 0;
+}
+.hero-buttons .btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  margin: 0.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: #3182ce;
+  color: white;
+}
+.hero-buttons .btn.primary {
+  background-color: #2b6cb0;
+}
+.scroll-down {
+  position: absolute;
+  bottom: 20px;
+  font-size: 2rem;
+  color: white;
+}
+
+/* Features */
+.features-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #1e3c72, #2a5298); /* New dark blue gradient */
+  color: #f1f1f1; /* Light text for contrast */
+  flex-wrap: wrap;
+}
+
+.feature {
+  flex: 1 1 250px;
+  max-width: 300px;
+  margin: 20px;
+}
+
+.feature i {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #cccccc;
+}
+
+.feature h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+.feature p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #e0e0e0;
+}
+
+
+/* About Section */
+.about {
+  padding: 4rem 0;
+}
+.about-content {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.about-content .text {
+  flex: 1;
+}
+.about-content .image img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Services */
+.services {
+  background-color: #edf2f7;
+  padding: 4rem 0;
+  text-align: center;
+}
+.services h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+.service-cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+.card {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  width: 300px;
+}
+.card i {
+  font-size: 2rem;
+  color: #4a5568;
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+.footer {
+  background-color: #1a202c;
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+}
+.footer .socials a {
+  color: white;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+
+/* Responsive Design */
+
+/* Tablets and below */
+@media (max-width: 1024px) {
+  .navbar .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .navbar .nav-links {
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-content .text,
+  .about-content .image {
+    width: 100%;
+  }
+
+  .service-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  .navbar .container {
+    align-items: center;
+  }
+
+  .consult-btn {
+    float: none;
+    width: 100%;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+
+  .hero {
+    height: auto;
+    padding: 4rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  .features-section {
+    flex-direction: column;
+    padding: 40px 10px;
+  }
+
+  .feature {
+    max-width: 90%;
+  }
+
+  .services h2 {
+    font-size: 1.5rem;
+  }
+
+  .footer {
+    padding: 2rem 1rem;
+  }
+
+  .footer p {
+    font-size: 14px;
+  }
+
+  .footer .socials a {
+    font-size: 1rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero h4 {
+    font-size: 1rem;
+  }
+
+  .feature i {
+    font-size: 36px;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .navbar .nav-links {
+    font-size: 0.9rem;
+  }
+}
